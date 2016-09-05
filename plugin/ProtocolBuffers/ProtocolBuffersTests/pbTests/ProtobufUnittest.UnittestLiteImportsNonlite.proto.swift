@@ -40,7 +40,7 @@ public extension ProtobufUnittest {
     public fileprivate(set) var message:ProtobufUnittest.TestAllTypes!
     public fileprivate(set) var hasMessage:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true

@@ -70,7 +70,7 @@ public extension Google.Protobuf.NoGenericServicesTest {
 
     public fileprivate(set) var hasA:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {

@@ -186,10 +186,6 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
     
     
     
-    void PrimitiveFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {
-    }
-    
-    
     void PrimitiveFieldGenerator::GenerateMembersSource(io::Printer* printer) const {
     }
     
@@ -300,9 +296,6 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
         if (descriptor_->options().packed()) {
             printer->Print(variables_,"private var $name$MemoizedSerializedSize:Int32 = -1\n");
         }
-    }
-    
-    void RepeatedPrimitiveFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {;
     }
     
     void RepeatedPrimitiveFieldGenerator::GenerateMembersSource(io::Printer* printer) const {

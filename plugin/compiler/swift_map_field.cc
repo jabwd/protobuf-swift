@@ -97,7 +97,6 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
     }
     
     void MapFieldGenerator::GenerateExtensionSource(io::Printer* printer) const {}
-    void MapFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {}
     void MapFieldGenerator::GenerateMembersSource(io::Printer* printer) const {}
     void MapFieldGenerator::GenerateBuilderMembersSource(io::Printer* printer) const {
         

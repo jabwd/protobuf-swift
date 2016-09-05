@@ -51,6 +51,9 @@ namespace google {
                     void GenerateParseFromMethodsSource(io::Printer* printer);
                 private:
                     
+                    void GenerateMessageHead(io::Printer* printer);
+                    void GenerateMessageGetBuilder(io::Printer* printer);
+                    void GenerateMessageInit(io::Printer* printer);
                     void GenerateMessageSerializationMethodsSource(io::Printer* printer);
                     
                     void GenerateSerializeOneFieldSource(io::Printer* printer,

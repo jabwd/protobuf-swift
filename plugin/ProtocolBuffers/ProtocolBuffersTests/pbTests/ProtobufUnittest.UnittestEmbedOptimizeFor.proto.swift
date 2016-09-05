@@ -42,7 +42,7 @@ public extension ProtobufUnittest {
     public fileprivate(set) var hasOptionalMessage:Bool = false
     public fileprivate(set) var repeatedMessage:Array<ProtobufUnittest.TestOptimizedForSize> = Array<ProtobufUnittest.TestOptimizedForSize>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasOptionalMessage {

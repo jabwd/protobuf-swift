@@ -119,7 +119,7 @@ final public class UserProfile : GeneratedMessage {
 
       public fileprivate(set) var hasUserId:Bool = false
       required public init() {
-           super.init()
+        super.init()
       }
       override public func isInitialized() -> Bool {
         if !hasUserId {
@@ -298,7 +298,7 @@ final public class UserProfile : GeneratedMessage {
       public fileprivate(set) var exception:UserProfile.Exception!
       public fileprivate(set) var hasException:Bool = false
       required public init() {
-           super.init()
+        super.init()
       }
       override public func isInitialized() -> Bool {
         if hasException {
@@ -648,7 +648,7 @@ final public class UserProfile : GeneratedMessage {
 
       public fileprivate(set) var hasErrorDescription:Bool = false
       required public init() {
-           super.init()
+        super.init()
       }
       override public func isInitialized() -> Bool {
         if !hasErrorCode {
@@ -869,7 +869,7 @@ final public class UserProfile : GeneratedMessage {
 
   public fileprivate(set) var hasAvatarUrl:Bool = false
   required public init() {
-       super.init()
+    super.init()
   }
   override public func isInitialized() -> Bool {
    return true

@@ -105,7 +105,7 @@ public extension ProtobufUnittest {
   // A message with message_set_wire_format.
   final public class TestMessageSet : ExtendableMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {
@@ -238,7 +238,7 @@ public extension ProtobufUnittest {
     public fileprivate(set) var messageSet:ProtobufUnittest.TestMessageSet!
     public fileprivate(set) var hasMessageSet:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasMessageSet {
@@ -454,7 +454,7 @@ public extension ProtobufUnittest {
          return TestMessageSetExtension1messageSetExtension
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -624,7 +624,7 @@ public extension ProtobufUnittest {
          return TestMessageSetExtension2messageSetExtension
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -800,7 +800,7 @@ public extension ProtobufUnittest {
 
         public fileprivate(set) var hasMessage:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
           if !hasTypeId {
@@ -1013,7 +1013,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var item:Array<ProtobufUnittest.RawMessageSet.Item> = Array<ProtobufUnittest.RawMessageSet.Item>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInititem:Bool = true

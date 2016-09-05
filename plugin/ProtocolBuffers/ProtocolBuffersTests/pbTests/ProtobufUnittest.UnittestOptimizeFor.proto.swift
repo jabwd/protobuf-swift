@@ -115,7 +115,7 @@ public extension ProtobufUnittest {
     }
     //OneOf declaration end
 
-    private var storageFoo:TestOptimizedForSize.Foo =  TestOptimizedForSize.Foo.FooOneOfNotSet
+    fileprivate var storageFoo:TestOptimizedForSize.Foo =  TestOptimizedForSize.Foo.FooOneOfNotSet
     public fileprivate(set) var i:Int32 = Int32(0)
 
     public fileprivate(set) var hasI:Bool = false
@@ -162,7 +162,7 @@ public extension ProtobufUnittest {
          return TestOptimizedForSizetestExtension2
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {
@@ -501,7 +501,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasX:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !hasX {
@@ -670,7 +670,7 @@ public extension ProtobufUnittest {
     public fileprivate(set) var o:ProtobufUnittest.TestRequiredOptimizedForSize!
     public fileprivate(set) var hasO:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasO {

@@ -237,6 +237,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F042B4A1D7C7DB30018A36F /* UnittestStruct_.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnittestStruct_.proto.swift; sourceTree = "<group>"; };
 		3F26F7461B909AD300428569 /* delimitedFile.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = delimitedFile.dat; sourceTree = "<group>"; };
 		3F31A1A91BA199C000F477C1 /* ProtocolBuffers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolBuffers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F41061C1A1A667700742090 /* ProtocolBuffers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolBuffers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,6 +379,7 @@
 		3F2B1CD719E2A6EC001A505E /* pbTests */ = {
 			isa = PBXGroup;
 			children = (
+				3F042B4A1D7C7DB30018A36F /* UnittestStruct_.proto.swift */,
 				3FCFED121D7AECF1006CF502 /* UnittestErrorType.proto.swift */,
 				3FF8D3991B121F48008D40C3 /* ProtobufUnittest.Unittest.proto.swift */,
 				3FF8D39A1B121F48008D40C3 /* ProtobufUnittestImport.UnittestImport.proto.swift */,

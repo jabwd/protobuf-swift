@@ -95,7 +95,7 @@ final internal class PBUser : GeneratedMessage {
   internal fileprivate(set) var group:PBGroup!
   internal fileprivate(set) var hasGroup:Bool = false
   required internal init() {
-       super.init()
+    super.init()
   }
   override internal func isInitialized() -> Bool {
    return true
@@ -302,7 +302,7 @@ final internal class PBGroup : GeneratedMessage {
   internal fileprivate(set) var owner:PBUser!
   internal fileprivate(set) var hasOwner:Bool = false
   required internal init() {
-       super.init()
+    super.init()
   }
   override internal func isInitialized() -> Bool {
    return true
@@ -508,7 +508,7 @@ final internal class PBGroup : GeneratedMessage {
 final internal class PBPerfomanceBatch : GeneratedMessage {
   internal fileprivate(set) var batch:Array<PBPerfomance> = Array<PBPerfomance>()
   required internal init() {
-       super.init()
+    super.init()
   }
   override internal func isInitialized() -> Bool {
     var isInitbatch:Bool = true
@@ -702,7 +702,7 @@ final internal class PBPerfomance : GeneratedMessage {
 
   internal fileprivate(set) var hasDescription:Bool = false
   required internal init() {
-       super.init()
+    super.init()
   }
   override internal func isInitialized() -> Bool {
     if !hasInts {
@@ -1130,7 +1130,7 @@ final internal class PBProtoPoint : GeneratedMessage {
 
   internal fileprivate(set) var hasLongitude:Bool = false
   required internal init() {
-       super.init()
+    super.init()
   }
   override internal func isInitialized() -> Bool {
     if !hasLatitude {
@@ -1366,7 +1366,7 @@ final internal class PBIceCreamCone : GeneratedMessage {
   internal fileprivate(set) var flavor:PBIceCreamCone.PBFlavor = PBIceCreamCone.PBFlavor.chocolate
   internal fileprivate(set) var hasFlavor:Bool = false
   required internal init() {
-       super.init()
+    super.init()
   }
   override internal func isInitialized() -> Bool {
    return true

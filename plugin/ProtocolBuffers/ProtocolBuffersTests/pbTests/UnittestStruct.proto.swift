@@ -42,7 +42,7 @@ final public class UnitTestStruct : GeneratedMessage {
 
   public fileprivate(set) var hasTestInt:Bool = false
   required public init() {
-       super.init()
+    super.init()
   }
   override public func isInitialized() -> Bool {
    return true

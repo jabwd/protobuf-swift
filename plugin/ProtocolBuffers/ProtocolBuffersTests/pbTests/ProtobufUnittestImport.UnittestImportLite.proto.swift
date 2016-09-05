@@ -63,7 +63,7 @@ public extension ProtobufUnittestImport {
 
     public fileprivate(set) var hasD:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true

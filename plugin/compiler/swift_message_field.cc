@@ -106,9 +106,6 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
         
     }
     
-    void MessageFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {
-    }
-    
     void MessageFieldGenerator::GenerateBuilderMembersSource(io::Printer* printer) const {
         printer->Print(variables_,
                        "$acontrol$var has$capitalized_name$:Bool {\n"
@@ -269,12 +266,7 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
            printer->Print(variables_, "$acontrol$fileprivate(set) var $name_reserved$:Array<$type$> = Array<$type$>()\n");
     }
     
-    
-    void RepeatedMessageFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {
-
-    }
         
-    
     void RepeatedMessageFieldGenerator::GenerateMembersSource(io::Printer* printer) const {
         
      

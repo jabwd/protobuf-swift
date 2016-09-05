@@ -40,7 +40,7 @@ public extension Bar {
 
     public fileprivate(set) var hasHello:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true

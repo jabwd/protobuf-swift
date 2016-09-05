@@ -123,7 +123,7 @@ public extension Google.Protobuf {
 
     public fileprivate(set) var hasGenerateStruct:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -418,7 +418,7 @@ public extension Google.Protobuf {
 
     public fileprivate(set) var hasGenerateErrorType:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -585,7 +585,7 @@ public extension Google.Protobuf {
 
     public fileprivate(set) var hasGenerateErrorType:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true

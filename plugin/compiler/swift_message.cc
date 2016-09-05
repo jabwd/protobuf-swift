@@ -216,16 +216,7 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
             printer->Print(comments.c_str());
         }
 
-        if (descriptor_->extension_range_count() > 0) {
-            printer->Print(variables_,
-                           "final $acontrol$ class $className$ : ExtendableMessage$errorType$ {\n"
-                          );
-        } else {
-            printer->Print(variables_,
-                           "final $acontrol$ class $className$ : GeneratedMessage$errorType$ {\n"
-                           );
-        }
-        printer->Indent();
+        GenerateMessageHead(printer);
         
         
         //Nested Types
@@ -247,7 +238,7 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
         for (int i = 0; i < descriptor_->oneof_decl_count(); i++) {
             string classNames = ClassNameOneof(descriptor_->oneof_decl(i));
             OneofGenerator(descriptor_->oneof_decl(i)).GenerateSource(printer);
-            printer->Print("private var storage$storageName$:$classname$ =  $classname$.$storageName$OneOfNotSet\n",
+            printer->Print("fileprivate var storage$storageName$:$classname$ =  $classname$.$storageName$OneOfNotSet\n",
                            "storageName", UnderscoresToCapitalizedCamelCase(descriptor_->oneof_decl(i)->name()),
                            "classname", classNames);
         }
@@ -267,8 +258,6 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
         
         ///
         
-        
-        
         for (int i = 0; i < descriptor_->field_count(); i++) {
             if (descriptor_->field(i)->options().deprecated()) {
                 printer->Print("@available(*, deprecated:0.1, message:\"The field is marked as \\\"Deprecated\\\"\")\n");
@@ -285,42 +274,11 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
             field_generators_.get(descriptor_->field(i)).GenerateMembersSource(printer);
         }
         
-        printer->Print(variables_,"required $acontrol$ init() {\n");
-        
-        
-        for (int i = 0; i < descriptor_->field_count(); i++) {
-            field_generators_.get(descriptor_->field(i)).GenerateInitializationSource(printer);
-        }
-        
-        
-        printer->Print("     super.init()\n"
-                       "}\n");
-        
-        
+        GenerateMessageInit(printer);
         GenerateIsInitializedSource(printer);
         GenerateMessageSerializationMethodsSource(printer);
-        
-//        GenerateParseFromMethodsSource(printer);
     
-        printer->Print(variables_,
-                       "$acontrol$ class func getBuilder() -> $classNameReturnedType$.Builder {\n"
-                       "  return $classNameReturnedType$.classBuilder() as! $classNameReturnedType$.Builder\n"
-                       "}\n"
-                       "$acontrol$ func getBuilder() -> $classNameReturnedType$.Builder {\n"
-                       "  return classBuilder() as! $classNameReturnedType$.Builder\n"
-                       "}\n"
-                       "$acontrol$ override class func classBuilder() -> ProtocolBuffersMessageBuilder {\n"
-                       "  return $classNameReturnedType$.Builder()\n"
-                       "}\n"
-                       "$acontrol$ override func classBuilder() -> ProtocolBuffersMessageBuilder {\n"
-                       "  return $classNameReturnedType$.Builder()\n"
-                       "}\n"
-                       "$acontrol$ func toBuilder() throws -> $classNameReturnedType$.Builder {\n"
-                       "  return try $classNameReturnedType$.builderWithPrototype(prototype: self)\n"
-                       "}\n"
-                       "$acontrol$ class func builderWithPrototype(prototype:$classNameReturnedType$) throws -> $classNameReturnedType$.Builder {\n"
-                       "  return try $classNameReturnedType$.Builder().mergeFrom(other: prototype)\n"
-                       "}\n");
+        GenerateMessageGetBuilder(printer);
         
         GenerateMessageDescriptionSource(printer);
         
@@ -345,6 +303,49 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
         
     }
     
+    void MessageGenerator::GenerateMessageInit(io::Printer* printer) {
+        printer->Print(variables_,"required $acontrol$ init() {\n");
+        printer->Indent();
+        printer->Print("super.init()\n");
+        printer->Outdent();
+        printer->Print("}\n");
+                       
+    }
+    
+    void MessageGenerator::GenerateMessageGetBuilder(io::Printer* printer) {
+        printer->Print(variables_,
+                       "$acontrol$ class func getBuilder() -> $classNameReturnedType$.Builder {\n"
+                       "  return $classNameReturnedType$.classBuilder() as! $classNameReturnedType$.Builder\n"
+                       "}\n"
+                       "$acontrol$ func getBuilder() -> $classNameReturnedType$.Builder {\n"
+                       "  return classBuilder() as! $classNameReturnedType$.Builder\n"
+                       "}\n"
+                       "$acontrol$ override class func classBuilder() -> ProtocolBuffersMessageBuilder {\n"
+                       "  return $classNameReturnedType$.Builder()\n"
+                       "}\n"
+                       "$acontrol$ override func classBuilder() -> ProtocolBuffersMessageBuilder {\n"
+                       "  return $classNameReturnedType$.Builder()\n"
+                       "}\n"
+                       "$acontrol$ func toBuilder() throws -> $classNameReturnedType$.Builder {\n"
+                       "  return try $classNameReturnedType$.builderWithPrototype(prototype: self)\n"
+                       "}\n"
+                       "$acontrol$ class func builderWithPrototype(prototype:$classNameReturnedType$) throws -> $classNameReturnedType$.Builder {\n"
+                       "  return try $classNameReturnedType$.Builder().mergeFrom(other: prototype)\n"
+                       "}\n");
+    }
+    
+    void MessageGenerator::GenerateMessageHead(io::Printer* printer) {
+        if (descriptor_->extension_range_count() > 0) {
+            printer->Print(variables_,
+                           "final $acontrol$ class $className$ : ExtendableMessage$errorType$ {\n"
+                           );
+        } else {
+            printer->Print(variables_,
+                           "final $acontrol$ class $className$ : GeneratedMessage$errorType$ {\n"
+                           );
+        }
+        printer->Indent();
+    }
     
     void MessageGenerator::GenerateMessageSerializationMethodsSource(io::Printer* printer) {
         scoped_array<const FieldDescriptor*> sorted_fields(SortFieldsByNumber(descriptor_));
@@ -594,8 +595,7 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
       
         printer->Outdent();
        
-        printer->Print(
-                      "}\n");
+        printer->Print("}\n");
         for (int i = 0; i < descriptor_->nested_type_count(); i++) {
             MessageGenerator(descriptor_->nested_type(i)).GenerateParseFromMethodsSource(printer);
         }

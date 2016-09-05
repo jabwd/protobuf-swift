@@ -1362,7 +1362,7 @@ public extension ProtobufUnittest {
 
         public fileprivate(set) var hasBb:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -1535,7 +1535,7 @@ public extension ProtobufUnittest {
 
         public fileprivate(set) var hasA:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -1708,7 +1708,7 @@ public extension ProtobufUnittest {
 
         public fileprivate(set) var hasA:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -1931,7 +1931,7 @@ public extension ProtobufUnittest {
     }
     //OneOf declaration end
 
-    private var storageOneofField:TestAllTypesLite.OneofField =  TestAllTypesLite.OneofField.OneofFieldOneOfNotSet
+    fileprivate var storageOneofField:TestAllTypesLite.OneofField =  TestAllTypesLite.OneofField.OneofFieldOneOfNotSet
 
 
       //Enum type declaration start 
@@ -2180,7 +2180,7 @@ public extension ProtobufUnittest {
           set(newValue) {}
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -5688,7 +5688,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasC:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -5880,7 +5880,7 @@ public extension ProtobufUnittest {
     private var packedEnumMemoizedSerializedSize:Int32 = 0
     public fileprivate(set) var packedEnum:Array<ProtobufUnittest.ForeignEnumLite> = Array<ProtobufUnittest.ForeignEnumLite>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -6722,7 +6722,7 @@ public extension ProtobufUnittest {
 
   final public class TestAllExtensionsLite : ExtendableMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {
@@ -6856,7 +6856,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasA:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -7023,7 +7023,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasA:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -7187,7 +7187,7 @@ public extension ProtobufUnittest {
 
   final public class TestPackedExtensionsLite : ExtendableMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {
@@ -7321,7 +7321,7 @@ public extension ProtobufUnittest {
          return TestNestedExtensionLitenestedExtension
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -7450,7 +7450,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasDeprecatedField:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -7627,7 +7627,7 @@ public extension ProtobufUnittest {
             public fileprivate(set) var field1:ProtobufUnittest.TestAllTypesLite!
             public fileprivate(set) var hasField1:Bool = false
             required public init() {
-                 super.init()
+              super.init()
             }
             override public func isInitialized() -> Bool {
              return true
@@ -7840,7 +7840,7 @@ public extension ProtobufUnittest {
             public fileprivate(set) var field1:ProtobufUnittest.TestAllTypesLite!
             public fileprivate(set) var hasField1:Bool = false
             required public init() {
-                 super.init()
+              super.init()
             }
             override public func isInitialized() -> Bool {
              return true
@@ -8053,7 +8053,7 @@ public extension ProtobufUnittest {
         public fileprivate(set) var ext1:Array<ProtobufUnittest.TestAllTypesLite> = Array<ProtobufUnittest.TestAllTypesLite>()
         public fileprivate(set) var ext2:Array<ProtobufUnittest.TestAllTypesLite> = Array<ProtobufUnittest.TestAllTypesLite>()
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -8464,7 +8464,7 @@ public extension ProtobufUnittest {
         public fileprivate(set) var optionalGroupAllTypes:ProtobufUnittest.TestAllTypesLite!
         public fileprivate(set) var hasOptionalGroupAllTypes:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -8677,7 +8677,7 @@ public extension ProtobufUnittest {
         public fileprivate(set) var repeatedGroupAllTypes:ProtobufUnittest.TestAllTypesLite!
         public fileprivate(set) var hasRepeatedGroupAllTypes:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -8897,7 +8897,7 @@ public extension ProtobufUnittest {
          return TestParsingMergeLiterepeatedExt
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !hasRequiredAllTypes {
@@ -9358,7 +9358,7 @@ public extension ProtobufUnittest {
   // TestEmptyMessageLite is used to test unknown fields support in lite mode.
   final public class TestEmptyMessageLite : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -9483,7 +9483,7 @@ public extension ProtobufUnittest {
   // actual extensions should ever be defined for this type.
   final public class TestEmptyMessageWithExtensionsLite : ExtendableMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {

@@ -815,7 +815,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasField1:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -981,7 +981,7 @@ public extension ProtobufUnittest {
   // some regular options, to make sure they interact nicely).
   final public class CustomOptionFooRequest : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1104,7 +1104,7 @@ public extension ProtobufUnittest {
 
   final public class CustomOptionFooResponse : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1227,7 +1227,7 @@ public extension ProtobufUnittest {
 
   final public class CustomOptionFooClientMessage : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1350,7 +1350,7 @@ public extension ProtobufUnittest {
 
   final public class CustomOptionFooServerMessage : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1493,7 +1493,7 @@ public extension ProtobufUnittest {
       //Enum type declaration end 
 
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1616,7 +1616,7 @@ public extension ProtobufUnittest {
 
   final public class DummyMessageInvalidAsOptionType : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1739,7 +1739,7 @@ public extension ProtobufUnittest {
 
   final public class CustomOptionMinIntegerValues : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1862,7 +1862,7 @@ public extension ProtobufUnittest {
 
   final public class CustomOptionMaxIntegerValues : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -1985,7 +1985,7 @@ public extension ProtobufUnittest {
 
   final public class CustomOptionOtherValues : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -2108,7 +2108,7 @@ public extension ProtobufUnittest {
 
   final public class SettingRealsFromPositiveInts : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -2231,7 +2231,7 @@ public extension ProtobufUnittest {
 
   final public class SettingRealsFromNegativeInts : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -2364,7 +2364,7 @@ public extension ProtobufUnittest {
     public fileprivate(set) var hasFoo3:Bool = false
     public fileprivate(set) var foo4:Array<Int32> = Array<Int32>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {
@@ -2670,7 +2670,7 @@ public extension ProtobufUnittest {
              return ComplexOptionType2ComplexOptionType4complexOpt4
         }
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -2843,7 +2843,7 @@ public extension ProtobufUnittest {
     public fileprivate(set) var hasFred:Bool = false
     public fileprivate(set) var barney:Array<ProtobufUnittest.ComplexOptionType2.ComplexOptionType4> = Array<ProtobufUnittest.ComplexOptionType2.ComplexOptionType4>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasBar {
@@ -3232,7 +3232,7 @@ public extension ProtobufUnittest {
 
         public fileprivate(set) var hasPlugh:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -3402,7 +3402,7 @@ public extension ProtobufUnittest {
     public fileprivate(set) var complexOptionType5:ProtobufUnittest.ComplexOptionType3.ComplexOptionType5!
     public fileprivate(set) var hasComplexOptionType5:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -3651,7 +3651,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasXyzzy:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -3816,7 +3816,7 @@ public extension ProtobufUnittest {
   // Note that we try various different ways of naming the same extension.
   final public class VariousComplexOptions : GeneratedMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -3939,7 +3939,7 @@ public extension ProtobufUnittest {
 
   final public class AggregateMessageSet : ExtendableMessage {
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if !extensionsAreInitialized() {
@@ -4076,7 +4076,7 @@ public extension ProtobufUnittest {
          return AggregateMessageSetElementmessageSetExtension
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -4256,7 +4256,7 @@ public extension ProtobufUnittest {
          return Aggregatenested
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasSub {
@@ -4725,7 +4725,7 @@ public extension ProtobufUnittest {
 
     public fileprivate(set) var hasFieldname:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -4898,7 +4898,7 @@ public extension ProtobufUnittest {
 
         public fileprivate(set) var hasNestedField:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -5084,7 +5084,7 @@ public extension ProtobufUnittest {
          return NestedOptionTypenestedExtension
     }
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true

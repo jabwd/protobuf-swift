@@ -315,7 +315,7 @@ public extension Google.Protobuf {
   final public class FileDescriptorSet : GeneratedMessage {
     public fileprivate(set) var file:Array<Google.Protobuf.FileDescriptorProto> = Array<Google.Protobuf.FileDescriptorProto>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInitfile:Bool = true
@@ -512,7 +512,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var sourceCodeInfo:Google.Protobuf.SourceCodeInfo!
     public fileprivate(set) var hasSourceCodeInfo:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInitmessageType:Bool = true
@@ -1221,7 +1221,7 @@ public extension Google.Protobuf {
 
         public fileprivate(set) var hasEnd:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -1438,7 +1438,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var options:Google.Protobuf.MessageOptions!
     public fileprivate(set) var hasOptions:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInitfield:Bool = true
@@ -2105,7 +2105,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var options:Google.Protobuf.FieldOptions!
     public fileprivate(set) var hasOptions:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasOptions {
@@ -2657,7 +2657,7 @@ public extension Google.Protobuf {
 
     public fileprivate(set) var hasName:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true
@@ -2828,7 +2828,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var options:Google.Protobuf.EnumOptions!
     public fileprivate(set) var hasOptions:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInitvalue:Bool = true
@@ -3138,7 +3138,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var options:Google.Protobuf.EnumValueOptions!
     public fileprivate(set) var hasOptions:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasOptions {
@@ -3437,7 +3437,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var options:Google.Protobuf.ServiceOptions!
     public fileprivate(set) var hasOptions:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInitmethod:Bool = true
@@ -3752,7 +3752,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var options:Google.Protobuf.MethodOptions!
     public fileprivate(set) var hasOptions:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       if hasOptions {
@@ -4192,7 +4192,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var hasDeprecated:Bool = false
     public fileprivate(set) var uninterpretedOption:Array<Google.Protobuf.UninterpretedOption> = Array<Google.Protobuf.UninterpretedOption>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInituninterpretedOption:Bool = true
@@ -4861,7 +4861,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var hasDeprecated:Bool = false
     public fileprivate(set) var uninterpretedOption:Array<Google.Protobuf.UninterpretedOption> = Array<Google.Protobuf.UninterpretedOption>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInituninterpretedOption:Bool = true
@@ -5251,7 +5251,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var hasWeak:Bool = false
     public fileprivate(set) var uninterpretedOption:Array<Google.Protobuf.UninterpretedOption> = Array<Google.Protobuf.UninterpretedOption>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInituninterpretedOption:Bool = true
@@ -5696,7 +5696,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var hasDeprecated:Bool = false
     public fileprivate(set) var uninterpretedOption:Array<Google.Protobuf.UninterpretedOption> = Array<Google.Protobuf.UninterpretedOption>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInituninterpretedOption:Bool = true
@@ -5967,7 +5967,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var hasDeprecated:Bool = false
     public fileprivate(set) var uninterpretedOption:Array<Google.Protobuf.UninterpretedOption> = Array<Google.Protobuf.UninterpretedOption>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInituninterpretedOption:Bool = true
@@ -6197,7 +6197,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var hasDeprecated:Bool = false
     public fileprivate(set) var uninterpretedOption:Array<Google.Protobuf.UninterpretedOption> = Array<Google.Protobuf.UninterpretedOption>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInituninterpretedOption:Bool = true
@@ -6427,7 +6427,7 @@ public extension Google.Protobuf {
     public fileprivate(set) var hasDeprecated:Bool = false
     public fileprivate(set) var uninterpretedOption:Array<Google.Protobuf.UninterpretedOption> = Array<Google.Protobuf.UninterpretedOption>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInituninterpretedOption:Bool = true
@@ -6671,7 +6671,7 @@ public extension Google.Protobuf {
 
         public fileprivate(set) var hasIsExtension:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
           if !hasNamePart {
@@ -6904,7 +6904,7 @@ public extension Google.Protobuf {
 
     public fileprivate(set) var hasAggregateValue:Bool = false
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
       var isInitname:Bool = true
@@ -7393,7 +7393,7 @@ public extension Google.Protobuf {
 
         public fileprivate(set) var hasTrailingComments:Bool = false
         required public init() {
-             super.init()
+          super.init()
         }
         override public func isInitialized() -> Bool {
          return true
@@ -7704,7 +7704,7 @@ public extension Google.Protobuf {
 
     public fileprivate(set) var location:Array<Google.Protobuf.SourceCodeInfo.Location> = Array<Google.Protobuf.SourceCodeInfo.Location>()
     required public init() {
-         super.init()
+      super.init()
     }
     override public func isInitialized() -> Bool {
      return true

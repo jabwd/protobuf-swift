@@ -109,10 +109,6 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
         }
     }
     
-    
-    
-    
-    void EnumFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {}
 
     void EnumFieldGenerator::GenerateBuilderMembersSource(io::Printer* printer) const {
         printer->Print(variables_,
@@ -228,9 +224,6 @@ namespace google { namespace protobuf { namespace compiler { namespace swift {
                        "private var $name$MemoizedSerializedSize:Int32 = 0\n");
         printer->Print(variables_,
                        "$acontrol$fileprivate(set) var $name_reserved$:Array<$type$> = Array<$type$>()\n");
-    }
-
-    void RepeatedEnumFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {
     }
     
     void RepeatedEnumFieldGenerator::GenerateMembersSource(io::Printer* printer) const {
