@@ -18,31 +18,31 @@
 import Foundation
 
 func UnsafeMutablePointerUInt8From(data: Data) -> UnsafeMutablePointer<UInt8> {
-	/*let ptr = UnsafeMutablePointer<UInt8>.allocate(capacity: data.count)
+	let ptr = UnsafeMutablePointer<UInt8>.allocate(capacity: data.count)
 	data.copyBytes(to: ptr, count: data.count)
-	return ptr*/
-	var blyat = Data(data)
+	return ptr
+	/*var blyat = Data(data)
 	let finalValue = blyat.withUnsafeMutableBytes { (bytesValue: UnsafeMutablePointer<UInt8>) -> UnsafeMutablePointer<UInt8> in
 		return bytesValue
 	}
-	return finalValue
+	return finalValue*/
     //return UnsafeMutablePointer<UInt8>(mutating: (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count))
 }
 
 func UnsafeMutablePointerInt8From(data: Data) -> UnsafeMutablePointer<Int8> {
-	/*let ptr = UnsafeMutablePointer<UInt8>.allocate(capacity: data.count)
+	let ptr = UnsafeMutablePointer<UInt8>.allocate(capacity: data.count)
 	data.copyBytes(to: ptr, count: data.count)
 	var resultPtr: UnsafeMutablePointer<Int8>? = nil
 	defer { ptr.deinitialize(count: data.count);ptr.deallocate(capacity: data.count) }
 	ptr.withMemoryRebound(to: Int8.self, capacity: data.count) { newPtr in
 		resultPtr = UnsafeMutablePointer<Int8>(newPtr)
 	}
-	return resultPtr!*/
-	var blyat = Data(data)
+	return resultPtr!
+/*	var blyat = Data(data)
 	let finalValue = blyat.withUnsafeMutableBytes { (bytesValue: UnsafeMutablePointer<Int8>) -> UnsafeMutablePointer<Int8> in
 		return bytesValue
 	}
-	return finalValue
+	return finalValue*/
 	//return UnsafeMutablePointer<Int8>(mutating: raw.bindMemory(to: Int8.self, capacity: data.count))
 	//return ptr
     //return UnsafeMutablePointer<Int8>(mutating: (data as NSData).bytes.bindMemory(to: Int8.self, capacity: data.count))
