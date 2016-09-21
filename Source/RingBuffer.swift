@@ -33,9 +33,9 @@ func UnsafeMutablePointerInt8From(data: Data) -> UnsafeMutablePointer<Int8> {
 		resultPtr = UnsafeMutablePointer<Int8>(newPtr)
 	}
 	return resultPtr!*/
-	var sub = subdata(in: 0..<MemoryLayout<Int8>.size)
-	let finalValue = sub.withUnsafeMutableBytes { (bytesValue: UnsafeMutablePointer<Int8>) -> Int8 in
-		return bytesValue.pointee
+	var blyat = Data(data)
+	let finalValue = blyat.withUnsafeMutableBytes { (bytesValue: UnsafeMutablePointer<Int8>) -> UnsafeMutablePointer<Int8> in
+		return bytesValue
 	}
 	return finalValue
 	//return UnsafeMutablePointer<Int8>(mutating: raw.bindMemory(to: Int8.self, capacity: data.count))
