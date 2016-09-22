@@ -90,7 +90,7 @@ internal class RingBuffer {
 		let inputPointer = UnsafeMutablePointerUInt8From(data: input)
         if position >= tail {
             totalWritten = min(buffer.count - position, aLength)
-            memcpy(pointer + Int(position), inputPointer + Int(aOffset), Int(totalWritten))
+            memcpy(pointer + Int(position), UnsafeRawPointer(inputPointer.advanced(by: Int(aOffset))), Int(totalWritten))
 //            buffer[position..<(position+totalWritten)] = input[aOffset..<input.count]
 
 //            input.copyBytes(to: pointer + position, from: aOffset..<aOffset + totalWritten)
@@ -116,7 +116,7 @@ internal class RingBuffer {
 
         let written = min(freeSpaces, aLength)
 
-        memcpy(pointer + position, inputPointer + Int(aOffset), Int(written))
+        memcpy(pointer + position, UnsafeRawPointer(inputPointer.advanced(by: Int(aOffset))), Int(written))
 
 //        input.copyBytes(to: pointer + position, from: aOffset..<aOffset + written)
         position += written
